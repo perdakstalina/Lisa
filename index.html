@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт для тебя</title>
+
+    <!-- Подключаем шрифт Poppins с Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background-color: #ffe4e1;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #ff69b4;
+            font-size: 55px; /* Увеличим размер заголовка */
+            margin-top: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .hidden {
+            display: none;
+        }
+        .content {
+            margin-top: 30px;
+        }
+        input[type="text"] {
+            padding: 14px;
+            font-size: 22px; /* Увеличиваем размер шрифта */
+            width: 80%;
+            margin-top: 10px;
+            border: 2px solid #ff69b4;
+            border-radius: 12px;
+            box-sizing: border-box;
+            background-color: #fff;
+            transition: border 0.3s ease;
+        }
+        input[type="text"]:focus {
+            border-color: #ff1493;
+            outline: none;
+        }
+        button {
+            padding: 14px 35px;
+            font-size: 22px; /* Увеличиваем размер кнопки */
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            box-sizing: border-box;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+
+        /* Рамка для фотографии */
+        .photo-frame {
+            margin-top: 30px;
+            width: 500px; /* Увеличим размер фотографии */
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            position: absolute;
+        }
+
+        /* Текстовое поле с улучшенным оформлением */
+        .text-field {
+            margin-top: 40px;
+            font-size: 26px; /* Увеличим размер текста */
+            color: #ff1493;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.6;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            letter-spacing: 0.5px;
+            text-align: left; /* Выравнивание текста по левому краю */
+        }
+
+        #check-phrase {
+            margin-top: 50px;
+        }
+
+        /* Адаптивный дизайн для мобильных устройств */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 40px;
+            }
+            input[type="text"], button {
+                font-size: 20px;
+                width: 90%;
+                padding: 12px;
+            }
+            .photo-frame {
+                width: 80%;
+                height: 80%;
+            }
+            .text-field {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Для тебя мой Лисёночек❤️</h1>
+
+    <!-- Форма для проверки фразы -->
+    <div id="check-phrase">
+        <p>Смотри, я решил сегодня не мудрить и просто сделать лёгкий шифр для тебя. Это шифр Виженера, но не всё так просто. На сайте, по ссылке ниже, ты сможешь расшифровать его, но тебе нужно будет ввести ключ. Этот ключ — одно слово, которое я готов тебе повторять вечно. А вот и сам шифр: <strong>к рёмэ чьвчь ую унмс нсриьютщмр ж фщжцюмзлъг шяаэргъ ьшмсл</strong></p>
+        <input type="text" id="user-input" placeholder="Введите фразу">
+        <br>
+        <button id="check-button" onclick="checkPhrase()">Проверить</button>
+    </div>
+
+    <!-- Секретный контент (фото и текстовое поле) будет скрыт по умолчанию -->
+    <div id="secret-content" class="hidden">
+        <div class="photo-frame">
+            <!-- Показываем только одно изображение -->
+            <img id="photo" src="1.png" alt="Фото 1">
+        </div>
+        <div class="text-field">
+            <p>Да, моя любимая, я тебя очень люблю за твоё чувство юмора! Сейчас мало людей, кто может воспринимать и чёрный юмор, и интеллектуальный юмор (sin*sin=2sin), и просто подурачиться! А ты смогла всё это совместить в себе — и твоё чувство юмора похоже на моё, а это просто супер!</p>
+            <p>В общем, я хочу тебе сказать, что ты заставляешь меня всегда улыбаться, даже когда я сонный, грустный или злой. Когда я общаюсь с тобой, невольно улыбаюсь, и становлюсь самым счастливым на этой планете! Спасибо тебе, что ты есть.</p>
+            <p>Я уже сильно соскучился по тебе, по твоим объятиям, по твоему запаху, по твоим губам... По всему! Я сильно хочу быть рядом с тобой, и я безумно сильно люблю тебя! Ты для меня самое дорогое счастье в мире ❤️❤️❤️</p>
+        </div>
+    </div>
+
+    <!-- Кнопка для включения музыки -->
+    <div class="content">
+        <button id="music-button" onclick="toggleMusic()">Включить музыку</button>
+        <audio id="audio" src="music.mp3" loop preload="auto"></audio>
+    </div>
+
+    <script>
+        let musicPlaying = false;
+        let audioElement = document.getElementById('audio');
+
+        // Функция для проверки введённой фразы
+        function checkPhrase() {
+            let userInput = document.getElementById('user-input').value;
+            let correctPhrase = "я тебя люблю за твоё прекрасное и уникальное чувство юмора";
+
+            if (userInput.toLowerCase() === correctPhrase.toLowerCase()) {
+                // Скрываем начальный контент и показываем секретный
+                document.getElementById('check-phrase').classList.add('hidden');
+                document.getElementById('secret-content').classList.remove('hidden');
+                document.getElementById('music-button').style.display = 'inline-block'; // Показываем кнопку музыки
+            } else {
+                alert("Фраза не совпадает, попробуй ещё раз!");
+            }
+        }
+
+        // Функция для включения музыки
+        function toggleMusic() {
+            if (musicPlaying) {
+                audioElement.pause();
+                musicPlaying = false;
+                document.getElementById('music-button').textContent = "Включить музыку";
+            } else {
+                audioElement.play();
+                musicPlaying = true;
+                document.getElementById('music-button').textContent = "Музыка включена!";
+            }
+        }
+    </script>
+
+</body>
+</html>
